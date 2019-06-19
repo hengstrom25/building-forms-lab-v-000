@@ -1,9 +1,16 @@
 // Add BandInput component
+<<<<<<< HEAD
 
 import React, { Component } from 'react'
+=======
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { addBand } from '../actions/bands';
+>>>>>>> fbea3befe6438b088498b4e1ec9eb88768a5b745
 
 
 class BandInput extends Component {
+<<<<<<< HEAD
 
   constructor(props){
     super(props)
@@ -26,6 +33,27 @@ class BandInput extends Component {
     })
   }
 
+=======
+  state = {
+    name: ''
+  }
+  
+  handleChange = event => {
+    this.setState({
+      text: event.target.value
+    });
+  };
+  
+  handleSubmit = event => {
+    event.preventDefault();
+    const band = {...this.state};
+    this.props.addBand(band);
+    this.setState({
+      name: ''
+    });
+  }
+  
+>>>>>>> fbea3befe6438b088498b4e1ec9eb88768a5b745
   render() {
     return(
       <div>
